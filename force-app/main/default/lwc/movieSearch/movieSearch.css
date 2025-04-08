@@ -1,0 +1,75 @@
+/* 🔹 Filter Section (Top Bar for Filters) */
+.filterSection {
+    background-color: rgb(53, 194, 229); /* Sets a light blue background */
+    padding: 15px; /* Adds padding around the filter section */
+    border-radius: 8px; /* Rounds the corners for a softer look */
+    border: solid 1px #ccc; /* Adds a light gray border */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    gap: 15px; /* Adds space between filter elements */
+}
+
+/* 🔹 Movie Display Section */
+.displayStyle {
+    height: 600px; /* Sets a fixed height for scrolling */
+    background-color: black; /* Gives a black background for contrast */
+    overflow-y: scroll; /* Enables vertical scrolling when content overflows */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 10px; /* Adds padding inside the container */
+    display: flex; /* Uses flexbox to align items */
+    flex-wrap: wrap; /* Allows movie tiles to wrap into multiple rows */
+    justify-content: center; /* Centers movie tiles horizontally */
+    gap: 10px; /* Reduces space between movie tiles */
+}
+
+/* 🔹 Movie Tile (Each Individual Movie Block) */
+.innerTile {
+    background-color: #fff; /* Sets a white background for each tile */
+    padding: 1rem; /* Adds padding inside the tile */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+    text-align: center; /* Centers text inside */
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for hover & selection effects */
+    width: 220px; /* Sets a fixed width for consistency */
+    height: 480px; /* Sets a fixed height so all tiles are equal */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: space-between; /* Distributes space between elements */
+    border: 2px solid transparent; /* Default border (invisible) to prevent layout shift */
+}
+
+/* 🔹 Highlight Selected Movie */
+.movieTileSelected {
+    border: 3px solid #00bfff !important; /* Adds a bright blue border when selected */
+    box-shadow: 0 6px 12px rgba(0, 191, 255, 0.5); /* Adds a glow effect */
+}
+
+/* 🔹 Image Styling */
+.innerTile img {
+    width: 100%; /* Ensures the image covers the full width of the tile */
+    height: 350px; /* Sets a fixed height to keep images uniform */
+    border-radius: 8px; /* Rounds the corners */
+    object-fit: cover; /* Ensures the image maintains aspect ratio and fills the area */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Adds a smooth zoom effect on hover */
+}
+
+/* 🔹 Text Section Below Image */
+.lowerThird {
+    background-color: rgba(0, 0, 0, 0.1); /* Adds a semi-transparent background */
+    padding: 0.5rem 1rem; /* Adds padding inside */
+    border-radius: 8px; /* Rounds the corners */
+    font-size: 1rem; /* Sets a standard font size */
+    font-weight: 600; /* Makes the text bold */
+    color: #222; /* Sets the text color to dark gray */
+    text-align: center; /* Centers the text */
+}
+
+/* 🔹 Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .innerTile {
+        width: 90%; /* Increases width for smaller screens */
+        height: auto; /* Allows height to adjust dynamically */
+    }
+}

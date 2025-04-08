@@ -1,0 +1,20 @@
+<template>
+    <template lwc:if={loadComponent}>
+        <div class="slds-p-around_small slds-var-m-top_medium container">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-3 slds-var-m-around_small movie-poster">
+                    <img src={moviedetail.Poster} alt="Movie Poster" class="slds-image slds-image_medium" />
+                </div>
+                <div class="slds-col slds-size_2-of-3 slds-var-m-around_small movie-info">
+                    <h1 class="slds-text-heading_medium slds-var-m-bottom_small movieTitle">{moviedetail.Title}</h1>
+                    <p><b>Year:</b>{moviedetail.Year}</p>
+                    <p><b>Rating:</b>{moviedetail.imdbRating}</p>
+                    <p><b>Released:</b>{moviedetail.Released}</p>
+                    <p><b>Genre:</b>{moviedetail.Genre}</p>
+                    <p><b>Writer:</b>{moviedetail.Writer}</p>
+                    <p><b>Actors:</b>{moviedetail.Actors}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

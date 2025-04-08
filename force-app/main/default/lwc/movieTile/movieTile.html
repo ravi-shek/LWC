@@ -1,0 +1,12 @@
+<template>
+    <!-- Main movie tile container -->
+    <div class={tileClass} onclick={handleClick}>
+        <!-- Movie Poster Image -->
+        <img src={movie.Poster} alt="Movie Poster" />
+        
+        <!-- Movie Title Section -->
+        <div class="lowerThird">
+            <h1>{movie.Title}</h1> <!-- Displays the movie title -->
+        </div>
+    </div>
+</template>

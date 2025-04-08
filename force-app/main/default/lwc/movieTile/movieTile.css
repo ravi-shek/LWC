@@ -1,0 +1,77 @@
+/* 📌 Container for displaying movie tiles */
+.displayStyle {
+    display: flex; /* Enables flexbox for layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Aligns all tiles properly in the center */
+    gap: 15px; /* Minimal gap between items to reduce extra space */
+    padding: 10px; /* Adds padding inside the container */
+}
+
+/* 📌 Styling for each movie tile */
+.innerTile {
+    background-color: #fff; /* White background for a clean look */
+    padding: 1rem; /* Adds space inside the tile */
+    border-radius: 10px; /* Rounds the corners for a smooth look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds a subtle shadow for depth */
+    text-align: center; /* Centers content inside the tile */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+    width: 250px; /* Fixed width for uniformity across all tiles */
+    height: 520px; /* Fixed height so all tiles are of equal size */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Arranges content in a column (Image → Title) */
+    justify-content: space-between; /* Ensures even spacing between elements */
+}
+
+/* 📌 Hover effect for movie tiles */
+.innerTile:hover {
+    box-shadow: 0 6px 12px rgba(235, 44, 44, 0.2); /* Increases shadow for a raised effect */
+}
+
+/* 📌 Styling for movie poster images inside the tile */
+.innerTile img {
+    width: 100%; /* Makes sure the image covers the tile width */
+    height: 380px; /* Fixed height for consistency across all images */
+    border-radius: 8px; /* Rounds image corners */
+    object-fit: cover; /* Ensures images maintain aspect ratio without distortion */
+    box-shadow: 0 2px 8px rgba(36, 17, 17, 0.2); /* Adds slight shadow around images */
+    transition: transform 0.2s ease-in-out; /* Smooth animation on hover */
+}
+
+/* 📌 Zoom effect when hovering over images */
+.innerTile img:hover {
+    transform: scale(1.05); /* Enlarges the image slightly when hovered */
+}
+
+/* 📌 Styling for movie title section */
+.lowerThird {
+    display: flex; /* Uses flexbox to center content */
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+    margin-top: 0.5rem; /* Adds space between image and title */
+    background-color: rgba(0, 0, 0, 0.1); /* Adds a slight background tint */
+    padding: 0.5rem 1rem; /* Adds padding around the text */
+    border-radius: 8px; /* Rounds the corners of the text container */
+    font-size: 1rem; /* Sets font size */
+    font-weight: 600; /* Makes text bold */
+    color: #222; /* Dark gray text color */
+    text-align: center; /* Centers text inside the container */
+    min-height: 60px; /* Ensures uniform height for text container across tiles */
+}
+
+/* 📌 Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .innerTile {
+        width: 90%; /* Increases width on smaller screens for better visibility */
+        height: auto; /* Allows height to adjust dynamically */
+    }
+
+    .innerTile img {
+        height: 300px; /* Reduces image height to fit smaller screens */
+    }
+}
+
+/* 🔹 Highlight Selected Movie with Blue Border */
+.movieTileSelected {
+    border: 3px solid #00bfff !important; /* Blue border for selected movie */
+    box-shadow: 0 6px 12px rgba(0, 191, 255, 0.5); /* Adds glowing effect for emphasis */
+}
